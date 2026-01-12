@@ -1,7 +1,5 @@
-// Simulating a 3rd-party Inventory API
-
 exports.getPartDetails = async (partId) => {
-  // Normally this would be axios.get("inventory-api/parts/" + partId)
+  
 
   const inventory = {
     BP01: { partName: "Brake Pad", price: 1200, stock: 20 },
@@ -14,3 +12,4 @@ exports.getPartDetails = async (partId) => {
 
   return inventory[partId];
 };
+
