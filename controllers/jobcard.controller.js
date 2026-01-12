@@ -1,7 +1,7 @@
 const JobCard = require("../models/JobCard");
 const { getPartDetails } = require("../services/inventory.service");
 
-/* ADVISOR */
+/* Advisor POST request */
 exports.createJobCard = async (req, res) => {
   try {
     const job = await JobCard.create({
@@ -14,7 +14,7 @@ exports.createJobCard = async (req, res) => {
   }
 };
 
-/* MANAGER */
+/* Manager PUT request */
 exports.assignTechnician = async (req, res) => {
   try {
     const job = await JobCard.findByIdAndUpdate(
@@ -28,7 +28,7 @@ exports.assignTechnician = async (req, res) => {
   }
 };
 
-/* TECHNICIAN */
+/* Technician PUT request */
 exports.updateProgress = async (req, res) => {
   try {
     const job = await JobCard.findById(req.params.id);
@@ -75,7 +75,7 @@ exports.completeJob = async (req, res) => {
   }
 };
 
-/* CASHIER */
+/* Cashier POST request */
 exports.generateBill = async (req, res) => {
   try {
     const job = await JobCard.findById(req.params.id);
@@ -128,7 +128,7 @@ exports.generateBill = async (req, res) => {
   }
 };
 
-/* COMMON */
+/* Common GET request */
 exports.getJobCards = async (req, res) => {
   try {
     const jobs = await JobCard.find()
@@ -139,6 +139,7 @@ exports.getJobCards = async (req, res) => {
   }
 };
 
+/* Managet GET request */
 exports.kanbanView = async (req, res) => {
   try {
     const data = {};
@@ -160,3 +161,4 @@ exports.kanbanView = async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 };
+
