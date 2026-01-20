@@ -52,7 +52,8 @@ export default function TechnicianCompleteJob() {
             marginBottom: 20
           }}
         >
-          <p><b>Vehicle:</b> {job.vehicleNumber}</p>
+          <b>JobcardId:</b> {job._id}<br/>
+          <p><b>vehicleNumber:</b> {job.vehicleNumber}</p>
           <p className="job-status"><b>Status:</b> {job.status}</p>
 
           {/* 🟡 BEFORE DONE */}

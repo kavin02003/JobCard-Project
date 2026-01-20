@@ -43,6 +43,8 @@ export default function TechnicianIssues() {
           }}
         >
           <p className="issue-status">
+            <b>JobcardId:</b>{job._id}<br/><br/>
+            <b>vehicleNumber:</b>{job.vehicleNumber}<br/><br/>
             <b>Status:</b> {job.status}
           </p>
 

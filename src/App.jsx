@@ -22,6 +22,11 @@ import Billing from "./pages/cashier/Billing";
 import ManagerAssignTechnician from "./pages/manager/ManagerAssignTechnician";
 import ManagerRoute from "./pages/manager/ManagerRoute";
 import ManagerKanban from "./pages/manager/ManagerKanban";
+import AdvisorLinks from "./pages/advisor/AdvisorLinks";
+import TechnicianLinks from "./pages/technician/TechnicianLinks";
+import ManagerLinks from "./pages/manager/ManagerLinks";
+import CashierLinks from "./pages/cashier/CashierLinks";
+import Authentication from "./pages/manager/Authentication";
 
 
 function App() {
@@ -32,6 +37,7 @@ function App() {
       <Routes>
         <Route path="/register" element={<Register/>} />
         <Route path="/" element={<Login />} />
+        <Route path="/advisor" element={<AdvisorLinks/>}/>
         <Route 
         path="/advisor/jobcard" 
         element={
@@ -40,6 +46,7 @@ function App() {
           </AdvisorRoute>
           } 
         />
+        <Route path="/technician" element={<TechnicianLinks/>}/>
          <Route
           path="/technician/jobs"
           element={
@@ -64,6 +71,7 @@ function App() {
             </TechnicianRoute>
           }
         />
+        <Route path="/cashier" element={<CashierLinks/>}/>
         <Route
           path="/cashier/billing"
           element={
@@ -72,6 +80,7 @@ function App() {
             </CashierRoute>
           }
         />
+        <Route path="/manager" element={<ManagerLinks/>}/>
          <Route
           path="/manager/assign"
           element={
@@ -88,6 +97,7 @@ function App() {
             </ManagerRoute>
           }
         />
+        <Route path="/Authenticate" element={<Authentication/>} />
 
         <Route path="/unauthorized" element={<h2>Unauthorized</h2>} />
       </Routes>

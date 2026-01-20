@@ -16,7 +16,8 @@ export default function Login() {
       const role = localStorage.getItem("role");
       navigate(`/${role.toLowerCase()}`);
     } catch (err) {
-      alert("Login failed");
+      const message =  err.response?.data?.message || "Login failed";
+      alert(message);
     }
   };
 
